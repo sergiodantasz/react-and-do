@@ -19,10 +19,6 @@ module.exports = {
   },
   plugins: ['react-refresh', '@typescript-eslint'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
     'prettier/prettier': ['error'],
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
