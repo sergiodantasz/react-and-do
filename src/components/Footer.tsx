@@ -5,7 +5,7 @@ export function Footer() {
         <p>
           Made by{' '}
           <a
-            className="link font-bold"
+            className="font-bold underline decoration-stone-300 underline-offset-4 transition-colors hover:decoration-stone-950 dark:decoration-stone-700 dark:hover:decoration-stone-50"
             href="https://github.com/sergiodantasz"
             target="_blank"
             rel="noopener noreferrer"
@@ -14,7 +14,7 @@ export function Footer() {
           </a>
           . Source code on{' '}
           <a
-            className="link font-bold"
+            className="font-bold underline decoration-stone-300 underline-offset-4 transition-colors hover:decoration-stone-950 dark:decoration-stone-700 dark:hover:decoration-stone-50"
             href="https://github.com/sergiodantasz/react-and-do"
             target="_blank"
             rel="noopener noreferrer"

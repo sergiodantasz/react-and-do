@@ -1,4 +1,4 @@
-import { Logo } from './Logo';
+import { Logo } from '@/components/Logo';
 import { ModeToggle } from '@/components/ModeToggle';
 
 export function Header() {

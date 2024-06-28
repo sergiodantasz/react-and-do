@@ -1,9 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@layer components {
-  .link {
-    @apply hover:underline hover:underline-offset-4;
-  }
-}

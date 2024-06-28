@@ -14,11 +14,7 @@ export function ModeToggle() {
         setTheme(isDarkTheme ? 'light' : 'dark');
       }}
     >
-      {isDarkTheme ? (
-        <Sun className="size-4 transform transition-all" />
-      ) : (
-        <Moon className="size-4 transition-all" />
-      )}
+      {isDarkTheme ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </Button>
   );
 }

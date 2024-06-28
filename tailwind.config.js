@@ -1,4 +1,8 @@
 import tailwindcssAnimate from 'tailwindcss-animate';
+import tailwindcssTypography from '@tailwindcss/typography';
+import tailwindcssForms from '@tailwindcss/forms';
+import tailwindcssAspectRatio from '@tailwindcss/aspect-ratio';
+import tailwindcssContainerQueries from '@tailwindcss/container-queries';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -39,5 +43,11 @@ export default {
       sans: ['Inria Sans', 'sans-serif'],
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    tailwindcssAnimate,
+    tailwindcssTypography,
+    tailwindcssForms,
+    tailwindcssAspectRatio,
+    tailwindcssContainerQueries,
+  ],
 };
