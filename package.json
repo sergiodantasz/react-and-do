@@ -7,6 +7,12 @@
     "name": "Sérgio Dantas",
     "email": "sergiodnts828@gmail.com"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/sergiodantasz/react-and-do",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sergiodantasz/react-and-do.git"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
