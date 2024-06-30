@@ -24,4 +24,10 @@ module.exports = {
     semi: ['error', 'always'],
     eqeqeq: ['error', 'always'],
   },
+  overrides: [
+    {
+      files: ['**/*.test.{ts,tsx}', '**/*.spec.{ts,tsx}'],
+      env: { jest: true },
+    },
+  ],
 };

@@ -1,5 +1,5 @@
-import { configureStore } from '@reduxjs/toolkit';
-import tasksReducer from '@/features/tasks/tasksSlice';
+import { combineSlices, configureStore } from '@reduxjs/toolkit';
+import tasksSlice from '@/features/tasks/tasksSlice';
 import { type Task } from '@/components/TaskForm';
 
 function loadTasks(): Task[] {
@@ -8,19 +8,23 @@ function loadTasks(): Task[] {
   return tasks;
 }
 
-export const store = configureStore({
-  reducer: {
-    tasks: tasksReducer,
-  },
-  preloadedState: {
-    tasks: { tasks: loadTasks() },
-  },
-});
+const rootReducer = combineSlices(tasksSlice);
+
+export function setupStore(preloadedState?: Partial<RootState>) {
+  const store = configureStore({
+    reducer: rootReducer,
+    preloadedState,
+  });
+  return store;
+}
+
+export const store = setupStore({ tasks: { tasks: loadTasks() } });
 
 store.subscribe(() => {
   const tasks = store.getState().tasks.tasks;
   localStorage.setItem('tasks', JSON.stringify(tasks));
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export type AppDispatch = typeof store.dispatch;
+export type RootState = ReturnType<typeof rootReducer>;
+export type AppStore = ReturnType<typeof setupStore>;
+export type AppDispatch = AppStore['dispatch'];
