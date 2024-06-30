@@ -2,6 +2,11 @@
   "name": "react-and-do",
   "private": true,
   "version": "0.0.0",
+  "description": "To-do list application made with React and Vite.",
+  "author": {
+    "name": "Sérgio Dantas",
+    "email": "sergiodnts828@gmail.com"
+  },
   "type": "module",
   "scripts": {
     "dev": "vite",
